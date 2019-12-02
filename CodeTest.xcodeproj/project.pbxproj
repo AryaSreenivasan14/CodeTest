@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		9E2581D92395ACF1005B7865 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E2581D82395ACF1005B7865 /* AppDelegate.m */; };
-		9E2581DC2395ACF1005B7865 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E2581DB2395ACF1005B7865 /* ViewController.m */; };
 		9E2581DF2395ACF1005B7865 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E2581DD2395ACF1005B7865 /* Main.storyboard */; };
 		9E2581E12395ACF2005B7865 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E2581E02395ACF2005B7865 /* Assets.xcassets */; };
 		9E2581E42395ACF2005B7865 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E2581E22395ACF2005B7865 /* LaunchScreen.storyboard */; };
 		9E2581E72395ACF2005B7865 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E2581E62395ACF2005B7865 /* main.m */; };
 		9E2581F12395ACF2005B7865 /* CodeTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E2581F02395ACF2005B7865 /* CodeTestTests.m */; };
 		9E2581FC2395ACF2005B7865 /* CodeTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E2581FB2395ACF2005B7865 /* CodeTestUITests.m */; };
+		9E25820B2395AD87005B7865 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E25820A2395AD87005B7865 /* ListViewController.m */; };
+		9E25820E2395AD9F005B7865 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E25820D2395AD9F005B7865 /* MapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +39,6 @@
 		9E2581D42395ACF1005B7865 /* CodeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E2581D72395ACF1005B7865 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9E2581D82395ACF1005B7865 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		9E2581DA2395ACF1005B7865 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		9E2581DB2395ACF1005B7865 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9E2581DE2395ACF1005B7865 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E2581E02395ACF2005B7865 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E2581E32395ACF2005B7865 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +50,10 @@
 		9E2581F72395ACF2005B7865 /* CodeTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E2581FB2395ACF2005B7865 /* CodeTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodeTestUITests.m; sourceTree = "<group>"; };
 		9E2581FD2395ACF2005B7865 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E2582092395AD87005B7865 /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		9E25820A2395AD87005B7865 /* ListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		9E25820C2395AD9F005B7865 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		9E25820D2395AD9F005B7865 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +104,15 @@
 		9E2581D62395ACF1005B7865 /* CodeTest */ = {
 			isa = PBXGroup;
 			children = (
+				9E2582112395ADCC005B7865 /* ManagerClasses */,
+				9E2582102395ADC1005B7865 /* CustomCells */,
+				9E25820F2395ADB8005B7865 /* DataModels */,
 				9E2581D72395ACF1005B7865 /* AppDelegate.h */,
 				9E2581D82395ACF1005B7865 /* AppDelegate.m */,
-				9E2581DA2395ACF1005B7865 /* ViewController.h */,
-				9E2581DB2395ACF1005B7865 /* ViewController.m */,
+				9E2582092395AD87005B7865 /* ListViewController.h */,
+				9E25820A2395AD87005B7865 /* ListViewController.m */,
+				9E25820C2395AD9F005B7865 /* MapViewController.h */,
+				9E25820D2395AD9F005B7865 /* MapViewController.m */,
 				9E2581DD2395ACF1005B7865 /* Main.storyboard */,
 				9E2581E02395ACF2005B7865 /* Assets.xcassets */,
 				9E2581E22395ACF2005B7865 /* LaunchScreen.storyboard */,
@@ -130,6 +138,27 @@
 				9E2581FD2395ACF2005B7865 /* Info.plist */,
 			);
 			path = CodeTestUITests;
+			sourceTree = "<group>";
+		};
+		9E25820F2395ADB8005B7865 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataModels;
+			sourceTree = "<group>";
+		};
+		9E2582102395ADC1005B7865 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		9E2582112395ADCC005B7865 /* ManagerClasses */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ManagerClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,9 +290,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E2581DC2395ACF1005B7865 /* ViewController.m in Sources */,
 				9E2581E72395ACF2005B7865 /* main.m in Sources */,
+				9E25820B2395AD87005B7865 /* ListViewController.m in Sources */,
 				9E2581D92395ACF1005B7865 /* AppDelegate.m in Sources */,
+				9E25820E2395AD9F005B7865 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
