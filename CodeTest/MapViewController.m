@@ -6,6 +6,8 @@
 //
 
 #import "MapViewController.h"
+#import "Properties.h"
+#import "Geometry.h"
 
 @interface MapViewController ()
 
@@ -15,17 +17,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    Properties *property  = [[Properties alloc]initWithDict:self.passedFeatures.properties];
+    Geometry *geometry = [[Geometry alloc] initWithDict:self.passedFeatures.geometry];
+    
+    if (geometry.coordinates.count>=2) {
+        CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake([geometry.coordinates[1] doubleValue], [geometry.coordinates[0] doubleValue]);
+        self.mapView.centerCoordinate = coordinate;
+        
+        MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
+        point.coordinate = coordinate;
+        point.title = property.place;
+        point.subtitle = [NSString stringWithFormat:@"%@ Magniture = %@",property.type,property.magnitude];
+        
+        [self.mapView addAnnotation:point];
+    }
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)dismiss:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
-*/
+
 
 @end

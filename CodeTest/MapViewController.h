@@ -6,11 +6,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import "Features.h"
 
-NS_ASSUME_NONNULL_BEGIN
 
 @interface MapViewController : UIViewController
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (nonatomic, strong) Features *passedFeatures;
 
 @end
-
-NS_ASSUME_NONNULL_END

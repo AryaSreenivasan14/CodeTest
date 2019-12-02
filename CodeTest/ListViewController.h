@@ -6,11 +6,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
-NS_ASSUME_NONNULL_BEGIN
+#import "GeoJSONResponse.h"
+#import "Features.h"
 
 @interface ListViewController : UIViewController
-
+@property (strong, nonatomic) GeoJSONResponse *geoJSONResponse;
+@property (strong, nonatomic) Features *selectedFeature;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) UIRefreshControl *refreshControl;
 @end
-
-NS_ASSUME_NONNULL_END
