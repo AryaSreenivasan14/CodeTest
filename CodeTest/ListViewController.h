@@ -12,6 +12,6 @@
 @interface ListViewController : UIViewController
 @property (strong, nonatomic) GeoJSONResponse *geoJSONResponse;
 @property (strong, nonatomic) Features *selectedFeature;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) UIRefreshControl *refreshControl;
+@property (retain, nonatomic) IBOutlet UITableView *tableView;
 @end

@@ -24,14 +24,20 @@
 
     // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
 }
-
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
+- (void)testTableAndMap {
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    if (app.tables.cells.count>0) {
+        [[app.tables.cells elementBoundByIndex:0] tap];
+    }
+    
+    
+    XCUIElement *map = [[[[[[[[[[XCUIApplication alloc] init] childrenMatchingType:XCUIElementTypeWindow] elementBoundByIndex:0] childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeOther] elementBoundByIndex:1] childrenMatchingType:XCUIElementTypeOther].element childrenMatchingType:XCUIElementTypeMap].element;
+    [map tap];
+    
+    XCUIElement *backButton = app.buttons[@"back"];
+    [backButton tap];
+    
 }
 
-- (void)testExample {
-    // Use recording to get started writing UI tests.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-}
 
 @end
